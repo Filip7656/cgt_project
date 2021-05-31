@@ -20,6 +20,10 @@ namespace CGT
             g.calculateAllEdges();
             g.computeAdjacentDegree();
             g.displayGraph();
+            
+            GeometricColoring geometricColoring = new GeometricColoring(g);
+            geometricColoring.colorGraph();
+            Console.WriteLine(geometricColoring.getColorCount());
 
 
 

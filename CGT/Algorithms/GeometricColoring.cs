@@ -25,12 +25,13 @@ namespace CGT.Algorithms
 
         }
 
+
         public double getDistance(Vertex v1, Vertex v2)
         {
-            int x1 = v1.getX();
-            int x2 = v2.getX();
-            int y1 = v1.getY();
-            int y2 = v2.getY();
+            double x1 = v1.getX();
+            double x2 = v2.getX();
+            double y1 = v1.getY();
+            double y2 = v2.getY();
             return Math.Sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
         }
         public void colorGraph()
@@ -60,13 +61,13 @@ namespace CGT.Algorithms
                             // we can choose another disk of the same color.
                             foreach (Vertex w in previousSelectedVertices)
                             {
-                                if (getDistance(v,w) < 3.0)
+                                if (getDistance(v, w) < 3.0)
                                 {
                                     found = false;
                                 }
                             }
                         }
-                        
+
                         // If such disk cannot be found, go to the next color.
                         if (!found)
                         {
@@ -79,12 +80,13 @@ namespace CGT.Algorithms
                     colors.Add(newColor);
                     selectedVertex.setColor(newColor);
                     List<Vertex> nearVertices = new List<Vertex>();
-                    
+
                     // Color each vertex within distance of 0.5 with the same color.
                     // This guarantees that any two vertices in such a disk have distance <= 1
                     foreach (Vertex v in colorlessVertices)
                     {
-                        if (getDistance(v, selectedVertex) < 0.5) {
+                        if (getDistance(v, selectedVertex) < 0.5)
+                        {
                             nearVertices.Add(v);
                         }
                     }

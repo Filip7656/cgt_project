@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/filipchlebowski/Projects/CGT/CGT/CGT.csproj": {}
+    "/Volumes/Dysk/Szkoła/cgt_project/CGT/CGT.csproj": {}
   },
   "projects": {
-    "/Users/filipchlebowski/Projects/CGT/CGT/CGT.csproj": {
+    "/Volumes/Dysk/Szkoła/cgt_project/CGT/CGT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/filipchlebowski/Projects/CGT/CGT/CGT.csproj",
+        "projectUniqueName": "/Volumes/Dysk/Szkoła/cgt_project/CGT/CGT.csproj",
         "projectName": "CGT",
-        "projectPath": "/Users/filipchlebowski/Projects/CGT/CGT/CGT.csproj",
+        "projectPath": "/Volumes/Dysk/Szkoła/cgt_project/CGT/CGT.csproj",
         "packagesPath": "/Users/filipchlebowski/.nuget/packages/",
-        "outputPath": "/Users/filipchlebowski/Projects/CGT/CGT/obj/",
+        "outputPath": "/Volumes/Dysk/Szkoła/cgt_project/CGT/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

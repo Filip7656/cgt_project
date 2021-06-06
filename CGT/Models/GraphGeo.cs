@@ -6,7 +6,7 @@ namespace CGT.Models
     public class GraphGeo
     {
         public Dictionary<String, Vertex> vertices;
-        private static int MAX_RAND_VAL = 6;
+        private int MAX_RAND_VAL = 6;
 
         private Dictionary<String, List<Vertex>> adjVertices;
 
@@ -22,6 +22,24 @@ namespace CGT.Models
                 }
             }
         }
+        public GraphGeo(List<String> vertexLabel, int maxRandValue)
+        {
+            this.MAX_RAND_VAL = maxRandValue;
+            vertices = new Dictionary<String, Vertex>();
+            adjVertices = new Dictionary<String, List<Vertex>>();
+            foreach (String label in vertexLabel)
+            {
+                if (!addNewVertex(label))
+                {
+                    throw new Exception("CANT ADD MORE VERTICES THAN MAX_RAND_VAL^2");
+                }
+            }
+        }
+        public GraphGeo()
+        {
+            vertices = new Dictionary<String, Vertex>();
+            adjVertices = new Dictionary<String, List<Vertex>>();
+        }
 
         public void calculateAllEdges()
         {
@@ -34,10 +52,11 @@ namespace CGT.Models
             }
         }
 
+
         public bool addNewVertex(String label)
         {
             Random r = new Random();
-            Vertex v = new Vertex(label, r.Next(MAX_RAND_VAL), r.Next(MAX_RAND_VAL));
+            Vertex v = new Vertex(label, r.NextDouble() * MAX_RAND_VAL, r.NextDouble() * MAX_RAND_VAL);
             if (validateVertex(v))
             {
                 vertices.Add(label, v);
@@ -106,7 +125,7 @@ namespace CGT.Models
             if (dist >= 1 && dist <= 2)
             {
                 if (!adjVertices[from].Contains(vertices[to])
-                        && !adjVertices[to].Contains(vertices[to]))
+                        && !adjVertices[to].Contains(vertices[from]))
                 {
                     adjVertices[from].Add(vertices[to]);
                     adjVertices[to].Add(vertices[from]);
@@ -135,11 +154,11 @@ namespace CGT.Models
             {
                 Console.Write(i.Key);
                 Console.Write("--> [");
-                i.Value.ForEach((a) => Console.Write(a.ToString()));
+                i.Value.ForEach((a) => Console.Write("{0} ", a));
                 Vertex v = vertices[i.Key];
-                Console.Write("] adj degree --> " + v.getAdjDegree());
-                Console.Write(" X:" + vertices[i.Key].getX());
-                Console.Write(" Y:" + vertices[i.Key].getY());
+                Console.Write("] adj degree --> {0} ", v.getAdjDegree());
+                Console.Write(" X: {0:0.00}", vertices[i.Key].getX());
+                Console.Write(" Y: {0:0.00}", vertices[i.Key].getY());
                 Console.WriteLine();
             }
         }

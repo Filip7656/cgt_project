@@ -4,25 +4,17 @@ using CGT.Models;
 
 namespace CGT.Algorithms
 {
-    public class DSatur
+    public class DSaturGeo
     {
 
         private GraphGeo graphGeo;
 
-        private Graph graph;
         private SortedSet<int> colors;
         private List<Vertex> colorlessVertices;
         public List<Vertex> initialVertices;
 
-        public DSatur(Graph graph)
-        {
-            this.graph = graph;
-            this.colors = new SortedSet<int>();
-            this.colorlessVertices = graph.getVertices();
-            this.initialVertices = graph.getVertices();
-        }
 
-        public DSatur(GraphGeo graph)
+        public DSaturGeo(GraphGeo graph)
         {
             this.graphGeo = graph;
             this.colors = new SortedSet<int>();
@@ -41,7 +33,7 @@ namespace CGT.Algorithms
 
             foreach (Vertex v in inputVertices)
             {
-                List<Vertex> adjacentVertices = graph.getAdjacentVertices(v);
+                List<Vertex> adjacentVertices = graphGeo.getAdjacentVertices(v);
                 SortedSet<int> adjColorCodes = new SortedSet<int>();
                 foreach (Vertex adjVertex in adjacentVertices)
                 {
@@ -58,9 +50,9 @@ namespace CGT.Algorithms
         public void calculateSaturationDegree()
         {
 
-            foreach (Vertex v in this.graph.getVertices())
+            foreach (Vertex v in this.graphGeo.getVertices())
             {
-                List<Vertex> adjacentVertices = graph.getAdjacentVertices(v);
+                List<Vertex> adjacentVertices = graphGeo.getAdjacentVertices(v);
                 SortedSet<int> adjColorCodes = new SortedSet<int>();
                 foreach (Vertex adjVertex in adjacentVertices)
                 {
@@ -85,7 +77,7 @@ namespace CGT.Algorithms
                 Vertex selectedVertex = PQNode.Max;
                 PQNode.Remove(selectedVertex);
 
-                List<Vertex> adjacentVertices = graph.getAdjacentVertices(selectedVertex);
+                List<Vertex> adjacentVertices = graphGeo.getAdjacentVertices(selectedVertex);
                 SortedSet<int> adjColorCodes = new SortedSet<int>();
                 foreach (Vertex adjVertex in adjacentVertices)
                 {
@@ -113,19 +105,19 @@ namespace CGT.Algorithms
 
                 colorlessVertices.Remove(selectedVertex);
 
-                calculateSaturationDegree(graph.getAdjacentVertices(selectedVertex));
+                calculateSaturationDegree(graphGeo.getAdjacentVertices(selectedVertex));
             }
 
         }
 
-        public Graph getGraph()
+        public GraphGeo getGraph()
         {
-            return graph;
+            return graphGeo;
         }
 
-        public void setGraph(Graph graph)
+        public void setGraph(GraphGeo graph)
         {
-            this.graph = graph;
+            this.graphGeo = graph;
         }
 
 

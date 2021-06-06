@@ -7,8 +7,8 @@ namespace CGT.Models
         private int adjDegree { get; set; }
         private int satDegree { get; set; }
         private int color { get; set; }
-        private int X { get; set; }
-        private int Y { get; set; }
+        private double X { get; set; }
+        private double Y { get; set; }
 
 
         public Vertex(String label)
@@ -21,7 +21,7 @@ namespace CGT.Models
             this.Y = 0;
         }
 
-        public Vertex(String label, int X, int Y)
+        public Vertex(String label, double X, double Y)
         {
             this.label = label;
             adjDegree = 0;
@@ -107,22 +107,22 @@ namespace CGT.Models
             return label;
         }
 
-        public int getX()
+        public double getX()
         {
             return X;
         }
 
-        public void setX(int x)
+        public void setX(double x)
         {
             X = x;
         }
 
-        public int getY()
+        public double getY()
         {
             return Y;
         }
 
-        public void setY(int y)
+        public void setY(double y)
         {
             Y = y;
         }

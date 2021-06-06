@@ -12,3 +12,17 @@
 /Users/filipchlebowski/Projects/CGT/CGT/obj/Release/net5.0/ref/CGT.dll
 /Users/filipchlebowski/Projects/CGT/CGT/obj/Release/net5.0/CGT.pdb
 /Users/filipchlebowski/Projects/CGT/CGT/obj/Release/net5.0/CGT.genruntimeconfig.cache
+/Volumes/Dysk/Szkoła/cgt_project/CGT/bin/Release/net5.0/CGT.deps.json
+/Volumes/Dysk/Szkoła/cgt_project/CGT/bin/Release/net5.0/CGT.runtimeconfig.json
+/Volumes/Dysk/Szkoła/cgt_project/CGT/bin/Release/net5.0/CGT.runtimeconfig.dev.json
+/Volumes/Dysk/Szkoła/cgt_project/CGT/bin/Release/net5.0/CGT.dll
+/Volumes/Dysk/Szkoła/cgt_project/CGT/bin/Release/net5.0/ref/CGT.dll
+/Volumes/Dysk/Szkoła/cgt_project/CGT/bin/Release/net5.0/CGT.pdb
+/Volumes/Dysk/Szkoła/cgt_project/CGT/obj/Release/net5.0/CGT.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Dysk/Szkoła/cgt_project/CGT/obj/Release/net5.0/CGT.AssemblyInfoInputs.cache
+/Volumes/Dysk/Szkoła/cgt_project/CGT/obj/Release/net5.0/CGT.AssemblyInfo.cs
+/Volumes/Dysk/Szkoła/cgt_project/CGT/obj/Release/net5.0/CGT.csproj.CoreCompileInputs.cache
+/Volumes/Dysk/Szkoła/cgt_project/CGT/obj/Release/net5.0/CGT.dll
+/Volumes/Dysk/Szkoła/cgt_project/CGT/obj/Release/net5.0/ref/CGT.dll
+/Volumes/Dysk/Szkoła/cgt_project/CGT/obj/Release/net5.0/CGT.pdb
+/Volumes/Dysk/Szkoła/cgt_project/CGT/obj/Release/net5.0/CGT.genruntimeconfig.cache
